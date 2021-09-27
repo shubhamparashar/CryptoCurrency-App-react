@@ -13,6 +13,7 @@
                  <Typography.Title level={2} className="logo">
                      <Link to="./">Cryptoverse</Link>
                  </Typography.Title>
+             </div>
                  <Menu theme="dark">
                      <Menu.Item icon={<HomeOutlined/>}>
                          <Link to="./">Home</Link>
@@ -27,7 +28,6 @@
                          <Link to="./news">News</Link>
                      </Menu.Item>
                  </Menu>
-             </div>
 
              
          </div>
