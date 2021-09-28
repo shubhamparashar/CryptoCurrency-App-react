@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Exchages = () => {
+const Exchanges = () => {
     return (
         <div>
-            Exchages
+            Exchanges
         </div>
     )
 }
 
-export default Exchages
+export default Exchanges

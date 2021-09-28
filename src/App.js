@@ -3,12 +3,12 @@ import { Switch, Route, Link } from "react-router-dom";
 import { Layout, Typography, Space } from "antd";
 
 import {
-  Navbar,
+  Exchanges,
   Homepage,
+  News,
   Cryptocurrencies,
   CryptoDetails,
-  News,
-  Exchages,
+  Navbar,
 } from "./components";
 import "./App.css";
 
@@ -22,26 +22,41 @@ const App = () => {
         <Layout>
           <div className="routes">
             <Switch>
-              <Route exact path="./">
+              <Route exact path="/">
                 <Homepage />
               </Route>
-              <Route exact path="./exchages">
-                <Exchages />
+              <Route exact path="/exchanges">
+                <Exchanges />
               </Route>
-              <Route exact path="./cryptocurrencies">
+              <Route exact path="/cryptocurrencies">
                 <Cryptocurrencies />
               </Route>
-              <Route exact path="./crypto/:coinId">
+              <Route exact path="/crypto/:coinId">
                 <CryptoDetails />
               </Route>
-              <Route exact path="./news">
+              <Route exact path="/news">
                 <News />
               </Route>
             </Switch>
           </div>
         </Layout>
+
+        <div className="footer">
+          <Typography.Title
+            leve={5}
+            style={{ color: "white", textAlign: "center" }}
+          >
+            Cryptoverse
+            <br />
+            All rights reserved
+          </Typography.Title>
+          <Space>
+            <Link to="/">Home</Link>
+            <Link to="/exchanges">Exchanges</Link>
+            <Link to="/news">News</Link>
+          </Space>
+        </div>
       </div>
-      <div className="footer"></div>
     </div>
   );
 };
