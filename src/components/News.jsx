@@ -18,7 +18,6 @@ const News = ({ simplified }) => {
     count: simplified ? 6 : 12,
   });
 
-  //   console.log(cryptoNews);
   if (isFetching) return "Loading.....";
   return (
     <>
