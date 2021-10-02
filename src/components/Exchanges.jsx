@@ -5,6 +5,7 @@ import HTMLReactParser from "html-react-parser";
 
 import { useGetCryptoExchangesQuery } from "../services/crytoApi";
 import exchangeIcon from "../images/cryptoExchange.png";
+import Loader from "./Loader";
 
 const Exchanges = () => {
   const { Text, Title } = Typography;
@@ -14,7 +15,7 @@ const Exchanges = () => {
 
   const exchangesList = data?.data?.exchanges;
 
-  if (isFetching) return "Loading...";
+  if (isFetching) return <Loader />;
   // console.log(cryptoExchanges);
   return (
     <>

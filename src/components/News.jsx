@@ -4,6 +4,7 @@ import moment from "moment";
 
 import { useGetCryptoNewsQuery } from "../services/crytoNewApi";
 import { useGetCryptosQuery } from "../services/crytoApi";
+import Loader from "./Loader";
 
 const { Title, Text } = Typography;
 const { Option } = Select;
@@ -18,7 +19,7 @@ const News = ({ simplified }) => {
     count: simplified ? 6 : 12,
   });
 
-  if (isFetching) return "Loading.....";
+  if (isFetching) return <Loader />;
   return (
     <>
       <Row gutter={[24, 24]}>
