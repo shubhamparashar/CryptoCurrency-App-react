@@ -40,7 +40,7 @@ const Cryptocurrencies = ({ simplified }) => {
                 extra={<img
                   className="crypto-image"
                   src={currency.iconUrl}
-                  alt={`${coin.name} logo`}
+                  alt={`${currency.name} logo`}
                 />}
               >
                 <p>Price: {millify(currency.price)}</p>
