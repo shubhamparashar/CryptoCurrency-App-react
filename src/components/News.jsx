@@ -53,7 +53,9 @@ const News = ({ simplified }) => {
                   <img
                     style={{ maxHeight: "100px", maxWidth: "200px" }}
                     src={news?.image?.thumbnail?.contentUrl || demoImage}
+                    alt={`Thumbnail for ${news.name}`}
                   />
+
                 </div>
                 <p>
                   {news.description > 100
